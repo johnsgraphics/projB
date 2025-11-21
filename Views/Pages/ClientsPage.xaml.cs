@@ -66,7 +66,7 @@ namespace CabinetDocProWpf.Views.Pages
                 {
                     try
                     {
-                        _clientsService.DeleteClient(client);
+                        _clientsService.DeleteClient(client.Id);
                         MessageBox.Show("Client supprimé avec succès!", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
                         LoadClients();
                     }

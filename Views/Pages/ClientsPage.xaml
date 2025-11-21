@@ -19,8 +19,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <!--  ... header, stats, search ...  -->
-            
+            <!--  Header Section ... -->
             <!--  Clients List (Visible when data exists) -->
             <Border
                 x:Name="ClientsList"
@@ -29,47 +28,28 @@
                 Background="Transparent"
                 Visibility="Collapsed">
                 <ListView
+                    Name="ListClients"
                     Background="Transparent"
                     BorderThickness="0"
-                    ItemsSource="{Binding}">
+                    ItemsSource="{Binding Clients}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Border
-                                Margin="0,0,0,15"
-                                Padding="24"
-                                Background="White"
-                                CornerRadius="12">
+                            <Border Margin="0,0,0,15" Padding="24" Background="White" CornerRadius="12">
                                 <Border.Effect>
-                                    <DropShadowEffect
-                                        BlurRadius="10"
-                                        Opacity="0.08"
-                                        ShadowDepth="0"
-                                        Color="#000000" />
+                                    <DropShadowEffect BlurRadius="10" Opacity="0.08" ShadowDepth="0" Color="#000000" />
                                 </Border.Effect>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
-                                        <!-- New: Delete button -->
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
 
                                     <StackPanel Grid.Column="0">
-                                        <TextBlock
-                                            FontSize="16"
-                                            FontWeight="SemiBold"
-                                            Foreground="#1F2937"
-                                            Text="{Binding Name}" />
-                                        <TextBlock
-                                            Margin="0,6,0,0"
-                                            FontSize="13"
-                                            Foreground="#6B7280"
-                                            Text="{Binding Address}" />
+                                        <TextBlock FontSize="16" FontWeight="SemiBold" Foreground="#1F2937" Text="{Binding Name}" />
+                                        <TextBlock Margin="0,6,0,0" FontSize="13" Foreground="#6B7280" Text="{Binding Address}" />
                                         <StackPanel Margin="0,8,0,0" Orientation="Horizontal">
-                                            <TextBlock
-                                                Margin="0,0,15,0"
-                                                FontSize="12"
-                                                Foreground="#9CA3AF">
+                                            <TextBlock Margin="0,0,15,0" FontSize="12" Foreground="#9CA3AF">
                                                 <Run Text="NIF: " />
                                                 <Run Foreground="#1F2937" Text="{Binding Nif}" />
                                             </TextBlock>
@@ -82,24 +62,12 @@
 
                                     <!-- Edit button -->
                                     <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                                        <Button
-                                            Padding="12,8"
-                                            Content="📝 Modifier"
-                                            FontSize="12"
-                                            Style="{StaticResource SecondaryButtonStyle}"
-                                            Command="{Binding DataContext.EditClientCommand, RelativeSource={RelativeSource AncestorType=Page}}"
-                                            CommandParameter="{Binding}" />
+                                        <Button Padding="12,8" Content="📝 Modifier" FontSize="12" Style="{StaticResource SecondaryButtonStyle}" Click="EditClient_Click"/>
                                     </StackPanel>
 
                                     <!-- Delete button -->
                                     <StackPanel Grid.Column="2" VerticalAlignment="Center">
-                                        <Button
-                                            Padding="12,8"
-                                            Content="🗑 Supprimer"
-                                            FontSize="12"
-                                            Style="{StaticResource DangerButtonStyle}"
-                                            Command="{Binding DataContext.DeleteClientCommand, RelativeSource={RelativeSource AncestorType=Page}}"
-                                            CommandParameter="{Binding}" />
+                                        <Button Padding="12,8" Content="🗑 Supprimer" FontSize="12" Style="{StaticResource DangerButtonStyle}" Click="DeleteClient_Click"/>
                                     </StackPanel>
                                 </Grid>
                             </Border>
@@ -108,7 +76,7 @@
                 </ListView>
             </Border>
 
-            <!--  ... empty state ...  -->
+            <!-- Empty State ... -->
         </Grid>
     </ScrollViewer>
 </Page>

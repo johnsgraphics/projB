@@ -1,0 +1,247 @@
+﻿<!--  filename: F:\CabinetDoc Pro\Views\Pages\DocumentPreviewPage.xaml  -->
+<Page
+    x:Class="CabinetDocProWpf.Views.Pages.DocumentPreviewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="800"
+    d:DesignWidth="1200"
+    Background="#F3F5FA"
+    mc:Ignorable="d">
+
+    <ScrollViewer PanningMode="VerticalOnly" VerticalScrollBarVisibility="Auto">
+        <Grid Margin="40,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--  Header Section  -->
+            <Grid Grid.Row="0" Margin="0,0,0,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock
+                        FontSize="28"
+                        FontWeight="Bold"
+                        Foreground="#1F2937"
+                        Text="Bibliothèque de Documents" />
+                    <TextBlock
+                        Margin="0,8,0,0"
+                        FontSize="14"
+                        Foreground="#6B7280"
+                        Text="Gérez et organisez tous vos documents comptables" />
+                </StackPanel>
+
+                <!--  Action Buttons  -->
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Button
+                        Margin="0,0,10,0"
+                        Padding="16,10"
+                        Content="📑 Vue Tableau"
+                        FontSize="13"
+                        Style="{StaticResource SecondaryButtonStyle}" />
+                    <Button
+                        Padding="16,10"
+                        Content="➕ Nouveau Document"
+                        FontSize="13"
+                        Style="{StaticResource PrimaryButtonStyle}" />
+                </StackPanel>
+            </Grid>
+
+            <!--  Search + Filters  -->
+            <Grid Grid.Row="1" Margin="0,0,0,25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="15" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="15" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="15" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!--  Search Box  -->
+                <Border
+                    Grid.Column="0"
+                    Background="White"
+                    BorderBrush="#E5E7EB"
+                    BorderThickness="1"
+                    CornerRadius="8">
+                    <TextBox
+                        x:Name="TxtSearch"
+                        Height="42"
+                        Padding="14,0"
+                        VerticalContentAlignment="Center"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        FontSize="14"
+                        Foreground="#6B7280"
+                        Text="🔍 Rechercher par client ou numéro..." />
+                </Border>
+
+                <!--  Document Type Filter  -->
+                <Border
+                    Grid.Column="2"
+                    Background="White"
+                    BorderBrush="#E5E7EB"
+                    BorderThickness="1"
+                    CornerRadius="8">
+                    <ComboBox
+                        Height="42"
+                        Padding="14,0"
+                        VerticalContentAlignment="Center"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        FontSize="14">
+                        <ComboBoxItem Content="Tous les documents" IsSelected="True" />
+                        <ComboBoxItem Content="Note d'Honoraires" />
+                        <ComboBoxItem Content="Rapport Spécial" />
+                    </ComboBox>
+                </Border>
+
+                <!--  Date Filter  -->
+                <Border
+                    Grid.Column="4"
+                    Background="White"
+                    BorderBrush="#E5E7EB"
+                    BorderThickness="1"
+                    CornerRadius="8">
+                    <ComboBox
+                        Height="42"
+                        Padding="14,0"
+                        VerticalContentAlignment="Center"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        FontSize="14">
+                        <ComboBoxItem Content="Toutes les dates" IsSelected="True" />
+                        <ComboBoxItem Content="Ce mois" />
+                        <ComboBoxItem Content="Ce trimestre" />
+                        <ComboBoxItem Content="Cette année" />
+                    </ComboBox>
+                </Border>
+
+                <!--  Client Filter  -->
+                <Border
+                    Grid.Column="6"
+                    Background="White"
+                    BorderBrush="#E5E7EB"
+                    BorderThickness="1"
+                    CornerRadius="8">
+                    <ComboBox
+                        Height="42"
+                        Padding="14,0"
+                        VerticalContentAlignment="Center"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        FontSize="14">
+                        <ComboBoxItem Content="Tous les clients" IsSelected="True" />
+                    </ComboBox>
+                </Border>
+            </Grid>
+
+            <!--  Results Summary  -->
+            <Grid Grid.Row="2" Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    FontSize="14"
+                    Foreground="#6B7280">
+                    <Run Text="0 documents trouvés" />
+                </TextBlock>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <TextBlock
+                        Margin="0,0,10,0"
+                        VerticalAlignment="Center"
+                        FontSize="13"
+                        Foreground="#6B7280"
+                        Text="Trier par:" />
+                    <Border
+                        Background="White"
+                        BorderBrush="#E5E7EB"
+                        BorderThickness="1"
+                        CornerRadius="6">
+                        <ComboBox
+                            Width="180"
+                            Height="36"
+                            Padding="10,0"
+                            VerticalContentAlignment="Center"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            FontSize="13">
+                            <ComboBoxItem Content="Date (Plus récent)" IsSelected="True" />
+                            <ComboBoxItem Content="Date (Plus ancien)" />
+                            <ComboBoxItem Content="Client (A-Z)" />
+                            <ComboBoxItem Content="Numéro" />
+                        </ComboBox>
+                    </Border>
+                </StackPanel>
+            </Grid>
+
+            <!--  Empty State  -->
+            <Border
+                Grid.Row="3"
+                Padding="60"
+                Background="White"
+                CornerRadius="12">
+                <Border.Effect>
+                    <DropShadowEffect
+                        BlurRadius="10"
+                        Opacity="0.08"
+                        ShadowDepth="0"
+                        Color="#000000" />
+                </Border.Effect>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Border
+                        Width="120"
+                        Height="120"
+                        Margin="0,0,0,25"
+                        Background="#F3F4F6"
+                        CornerRadius="60">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="60"
+                            Text="📄" />
+                    </Border>
+
+                    <TextBlock
+                        Margin="0,0,0,10"
+                        HorizontalAlignment="Center"
+                        FontSize="22"
+                        FontWeight="SemiBold"
+                        Foreground="#1F2937"
+                        Text="Aucun document trouvé" />
+                    <TextBlock
+                        MaxWidth="450"
+                        Margin="0,0,0,30"
+                        HorizontalAlignment="Center"
+                        FontSize="14"
+                        Foreground="#6B7280"
+                        Text="Aucun document ne correspond aux critères de recherche actuels. Ajustez vos filtres ou créez un nouveau document."
+                        TextAlignment="Center"
+                        TextWrapping="Wrap" />
+
+                    <Button
+                        Padding="20,12"
+                        Content="➕ Créer un nouveau document"
+                        FontSize="14"
+                        Style="{StaticResource PrimaryButtonStyle}" />
+                </StackPanel>
+            </Border>
+
+        </Grid>
+    </ScrollViewer>
+</Page>

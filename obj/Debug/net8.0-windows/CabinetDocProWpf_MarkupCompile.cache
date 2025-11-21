@@ -1,0 +1,20 @@
+﻿CabinetDocProWpf
+
+
+winexe
+C#
+.cs
+F:\CabinetDoc Pro\obj\Debug\net8.0-windows\
+CabinetDoc_Pro
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+F:\CabinetDoc Pro\App.xaml
+71968102215
+
+19503764681
+198338916705
+Views\MainWindow.xaml;Views\Pages\ClientsPage.xaml;Views\Pages\DashboardPage.xaml;Views\Pages\DocumentPreviewPage.xaml;Views\Pages\NoteHonorairePage.xaml;Views\Pages\RapportSpecialPage.xaml;Views\Pages\SettingsPage.xaml;
+
+False
+

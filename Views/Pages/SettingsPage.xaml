@@ -1,0 +1,480 @@
+﻿<!--  NO CHANGES: ScrollViewer already uses CanContentScroll="False" by default for pixel-based scrolling  -->
+<!--  Smooth wheel scrolling implemented in code-behind via PreviewMouseWheel handler  -->
+<Page
+    x:Class="CabinetDocProWpf.Views.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="800"
+    d:DesignWidth="1200"
+    Background="#FAFAFA"
+    mc:Ignorable="d">
+
+    <ScrollViewer
+        x:Name="MainScrollViewer"
+        CanContentScroll="False"
+        PanningMode="VerticalOnly"
+        PreviewMouseWheel="ScrollViewer_PreviewMouseWheel"
+        VerticalScrollBarVisibility="Auto">
+        <Grid Margin="40,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--  Header  -->
+            <Grid Grid.Row="0" Margin="0,0,0,25">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock
+                            Margin="0,0,10,0"
+                            VerticalAlignment="Center"
+                            FontSize="28"
+                            Text="⚙️" />
+                        <TextBlock
+                            VerticalAlignment="Center"
+                            FontSize="28"
+                            FontWeight="Bold"
+                            Foreground="#1F2937"
+                            Text="Paramètres" />
+                    </StackPanel>
+                    <TextBlock
+                        Margin="38,6,0,0"
+                        FontSize="13"
+                        Foreground="#6B7280"
+                        Text="Configurez votre cabinet et personnalisez l'application" />
+                </StackPanel>
+            </Grid>
+
+            <!--  Tabs  -->
+            <Border
+                Grid.Row="1"
+                Margin="0,0,0,20"
+                Padding="6"
+                Background="White"
+                CornerRadius="10">
+                <Border.Effect>
+                    <DropShadowEffect
+                        BlurRadius="8"
+                        Opacity="0.06"
+                        ShadowDepth="0"
+                        Color="#000000" />
+                </Border.Effect>
+                <StackPanel Orientation="Horizontal">
+                    <Button
+                        x:Name="BtnTabFirm"
+                        Margin="0,0,8,0"
+                        Padding="14,9"
+                        Click="BtnTabFirm_Click"
+                        Content="🏢 Informations du Cabinet"
+                        FontSize="13"
+                        Style="{StaticResource PrimaryButtonStyle}" />
+                    <Button
+                        x:Name="BtnTabThemes"
+                        Margin="0,0,8,0"
+                        Padding="14,9"
+                        Click="BtnTabThemes_Click"
+                        Content="🎨 Thèmes de Documents"
+                        FontSize="13"
+                        Style="{StaticResource SecondaryButtonStyle}" />
+                    <Button
+                        x:Name="BtnTabPreferences"
+                        Padding="14,9"
+                        Click="BtnTabPreferences_Click"
+                        Content="⚙️ Préférences"
+                        FontSize="13"
+                        Style="{StaticResource SecondaryButtonStyle}" />
+                </StackPanel>
+            </Border>
+
+            <!--  Content Frame  -->
+            <Border
+                Grid.Row="2"
+                Padding="30"
+                Background="White"
+                CornerRadius="12">
+                <Border.Effect>
+                    <DropShadowEffect
+                        BlurRadius="8"
+                        Opacity="0.06"
+                        ShadowDepth="0"
+                        Color="#000000" />
+                </Border.Effect>
+                <ScrollViewer CanContentScroll="False" VerticalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="SettingsContent">
+
+                        <!--  TAB 1: Informations du Cabinet  -->
+                        <StackPanel x:Name="FirmInfoTab">
+                            <TextBlock
+                                Margin="0,0,0,20"
+                                FontSize="18"
+                                FontWeight="SemiBold"
+                                Foreground="#1F2937"
+                                Text="🏢 Informations du Cabinet" />
+
+                            <!--  Nom du Cabinet  -->
+                            <StackPanel Margin="0,0,0,20">
+                                <TextBlock
+                                    Margin="0,0,0,8"
+                                    FontSize="13"
+                                    Foreground="#6B7280"
+                                    Text="Nom du Cabinet" />
+                                <Border
+                                    Padding="12,10"
+                                    Background="White"
+                                    BorderBrush="#E5E7EB"
+                                    BorderThickness="1"
+                                    CornerRadius="6">
+                                    <TextBox
+                                        x:Name="TxtCabinetName"
+                                        AcceptsReturn="True"
+                                        Background="Transparent"
+                                        BorderThickness="0"
+                                        FontSize="13"
+                                        Text="CABINET DE COMPTABILITÉ&#x0a;ET COMMISSAIRE AUX COMPTES"
+                                        TextWrapping="Wrap" />
+                                </Border>
+                            </StackPanel>
+
+                            <!--  Nom du comptable  -->
+                            <StackPanel Margin="0,0,0,20">
+                                <TextBlock
+                                    Margin="0,0,0,8"
+                                    FontSize="13"
+                                    Foreground="#6B7280"
+                                    Text="Nom du comptable *" />
+                                <Border
+                                    Padding="12,10"
+                                    Background="White"
+                                    BorderBrush="#E5E7EB"
+                                    BorderThickness="1"
+                                    CornerRadius="6">
+                                    <TextBox
+                                        x:Name="TxtAccountantName"
+                                        Background="Transparent"
+                                        BorderThickness="0"
+                                        FontSize="13"
+                                        Text="MME KEBILI AMEL" />
+                                </Border>
+                            </StackPanel>
+
+                            <!--  Adresse  -->
+                            <StackPanel Margin="0,0,0,20">
+                                <TextBlock
+                                    Margin="0,0,0,8"
+                                    FontSize="13"
+                                    Foreground="#6B7280"
+                                    Text="Adresse *" />
+                                <Border
+                                    Padding="12,10"
+                                    Background="White"
+                                    BorderBrush="#E5E7EB"
+                                    BorderThickness="1"
+                                    CornerRadius="6">
+                                    <TextBox
+                                        x:Name="TxtAddress"
+                                        Background="Transparent"
+                                        BorderThickness="0"
+                                        FontSize="13"
+                                        Text="15 Rue Didouche Mourad, Alger 16000, Algérie" />
+                                </Border>
+                            </StackPanel>
+
+                            <Border
+                                Height="1"
+                                Margin="0,10,0,25"
+                                Background="#E5E7EB" />
+
+                            <!--  Informations Légales  -->
+                            <TextBlock
+                                Margin="0,0,0,20"
+                                FontSize="16"
+                                FontWeight="SemiBold"
+                                Foreground="#1F2937"
+                                Text="📄 Informations Légales" />
+
+                            <Grid Margin="0,0,0,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="15" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="15" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock
+                                        Margin="0,0,0,8"
+                                        FontSize="13"
+                                        Foreground="#6B7280"
+                                        Text="AGRÉMENT *" />
+                                    <Border
+                                        Padding="12,10"
+                                        Background="White"
+                                        BorderBrush="#E5E7EB"
+                                        BorderThickness="1"
+                                        CornerRadius="6">
+                                        <TextBox
+                                            x:Name="TxtAgrement"
+                                            Background="Transparent"
+                                            BorderThickness="0"
+                                            FontSize="13"
+                                            Text="AGR-2023-001" />
+                                    </Border>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock
+                                        Margin="0,0,0,8"
+                                        FontSize="13"
+                                        Foreground="#6B7280"
+                                        Text="NIF *" />
+                                    <Border
+                                        Padding="12,10"
+                                        Background="White"
+                                        BorderBrush="#E5E7EB"
+                                        BorderThickness="1"
+                                        CornerRadius="6">
+                                        <TextBox
+                                            x:Name="TxtNif"
+                                            Background="Transparent"
+                                            BorderThickness="0"
+                                            FontSize="13"
+                                            Text="099916000123456" />
+                                    </Border>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="4">
+                                    <TextBlock
+                                        Margin="0,0,0,8"
+                                        FontSize="13"
+                                        Foreground="#6B7280"
+                                        Text="NIS *" />
+                                    <Border
+                                        Padding="12,10"
+                                        Background="White"
+                                        BorderBrush="#E5E7EB"
+                                        BorderThickness="1"
+                                        CornerRadius="6">
+                                        <TextBox
+                                            x:Name="TxtNis"
+                                            Background="Transparent"
+                                            BorderThickness="0"
+                                            FontSize="13"
+                                            Text="000116000123456" />
+                                    </Border>
+                                </StackPanel>
+                            </Grid>
+
+                            <StackPanel Margin="0,0,0,20">
+                                <TextBlock
+                                    Margin="0,0,0,8"
+                                    FontSize="13"
+                                    Foreground="#6B7280"
+                                    Text="AI" />
+                                <Border
+                                    Padding="12,10"
+                                    Background="White"
+                                    BorderBrush="#E5E7EB"
+                                    BorderThickness="1"
+                                    CornerRadius="6">
+                                    <TextBox
+                                        x:Name="TxtAi"
+                                        Background="Transparent"
+                                        BorderThickness="0"
+                                        FontSize="13"
+                                        Text="16000123456001" />
+                                </Border>
+                            </StackPanel>
+
+                            <Border
+                                Height="1"
+                                Margin="0,10,0,25"
+                                Background="#E5E7EB" />
+
+                            <!--  Informations Bancaires  -->
+                            <TextBlock
+                                Margin="0,0,0,20"
+                                FontSize="16"
+                                FontWeight="SemiBold"
+                                Foreground="#1F2937"
+                                Text="🏦 Informations Bancaires" />
+
+                            <Grid Margin="0,0,0,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="15" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock
+                                        Margin="0,0,0,8"
+                                        FontSize="13"
+                                        Foreground="#6B7280"
+                                        Text="Nom de la Banque" />
+                                    <Border
+                                        Padding="12,10"
+                                        Background="White"
+                                        BorderBrush="#E5E7EB"
+                                        BorderThickness="1"
+                                        CornerRadius="6">
+                                        <TextBox
+                                            x:Name="TxtBankName"
+                                            Background="Transparent"
+                                            BorderThickness="0"
+                                            FontSize="13"
+                                            Text="Banque d'Algérie" />
+                                    </Border>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock
+                                        Margin="0,0,0,8"
+                                        FontSize="13"
+                                        Foreground="#6B7280"
+                                        Text="Numéro de Compte" />
+                                    <Border
+                                        Padding="12,10"
+                                        Background="White"
+                                        BorderBrush="#E5E7EB"
+                                        BorderThickness="1"
+                                        CornerRadius="6">
+                                        <TextBox
+                                            x:Name="TxtBankAccount"
+                                            Background="Transparent"
+                                            BorderThickness="0"
+                                            FontSize="13"
+                                            Text="007030990000123456789" />
+                                    </Border>
+                                </StackPanel>
+                            </Grid>
+
+                            <StackPanel Margin="0,0,0,20">
+                                <TextBlock
+                                    Margin="0,0,0,8"
+                                    FontSize="13"
+                                    Foreground="#6B7280"
+                                    Text="Adresse de la Banque" />
+                                <Border
+                                    Padding="12,10"
+                                    Background="White"
+                                    BorderBrush="#E5E7EB"
+                                    BorderThickness="1"
+                                    CornerRadius="6">
+                                    <TextBox
+                                        x:Name="TxtBankAddress"
+                                        Background="Transparent"
+                                        BorderThickness="0"
+                                        FontSize="13"
+                                        Text="Agence Centrale, 38 Avenue Franklin Roosevelt, Alger" />
+                                </Border>
+                            </StackPanel>
+
+                            <Border
+                                Height="1"
+                                Margin="0,10,0,25"
+                                Background="#E5E7EB" />
+
+                            <!--  Logo du Cabinet  -->
+                            <TextBlock
+                                Margin="0,0,0,20"
+                                FontSize="16"
+                                FontWeight="SemiBold"
+                                Foreground="#1F2937"
+                                Text="🖼️ Logo du Cabinet" />
+
+                            <Border
+                                Margin="0,0,0,20"
+                                Padding="30"
+                                Background="#F9FAFB"
+                                BorderBrush="#E5E7EB"
+                                BorderThickness="1"
+                                CornerRadius="8">
+                                <StackPanel HorizontalAlignment="Center">
+                                    <Border
+                                        Width="120"
+                                        Height="120"
+                                        Margin="0,0,0,20"
+                                        Background="#E5E7EB"
+                                        CornerRadius="60">
+                                        <Grid>
+                                            <TextBlock
+                                                x:Name="TxtNoLogo"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                FontSize="50"
+                                                Foreground="#9CA3AF"
+                                                Text="📷" />
+                                            <Image
+                                                x:Name="ImgLogo"
+                                                Stretch="UniformToFill"
+                                                Visibility="Collapsed" />
+                                        </Grid>
+                                    </Border>
+                                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                        <Button
+                                            Margin="0,0,10,0"
+                                            Padding="14,9"
+                                            Click="BtnUploadLogo_Click"
+                                            Content="📤 Télécharger un logo"
+                                            FontSize="13"
+                                            Style="{StaticResource PrimaryButtonStyle}" />
+                                        <Button
+                                            Padding="14,9"
+                                            Click="BtnDeleteLogo_Click"
+                                            Content="🗑️ Supprimer"
+                                            FontSize="13"
+                                            Style="{StaticResource SecondaryButtonStyle}" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+
+                            <!--  Save Button  -->
+                            <Button
+                                Padding="16,10"
+                                HorizontalAlignment="Right"
+                                Click="BtnSaveFirmInfo_Click"
+                                Content="💾 Enregistrer les modifications"
+                                FontSize="14"
+                                Style="{StaticResource PrimaryButtonStyle}" />
+
+                        </StackPanel>
+
+                        <!--  TAB 2: Thèmes  -->
+                        <StackPanel x:Name="ThemesTab" Visibility="Collapsed">
+                            <TextBlock
+                                Margin="0,0,0,20"
+                                FontSize="18"
+                                FontWeight="SemiBold"
+                                Foreground="#1F2937"
+                                Text="🎨 Thèmes de Documents" />
+                            <TextBlock
+                                FontSize="14"
+                                Foreground="#6B7280"
+                                Text="Fonctionnalité à venir..." />
+                        </StackPanel>
+
+                        <!--  TAB 3: Préférences  -->
+                        <StackPanel x:Name="PreferencesTab" Visibility="Collapsed">
+                            <TextBlock
+                                Margin="0,0,0,20"
+                                FontSize="18"
+                                FontWeight="SemiBold"
+                                Foreground="#1F2937"
+                                Text="⚙️ Préférences" />
+                            <TextBlock
+                                FontSize="14"
+                                Foreground="#6B7280"
+                                Text="Fonctionnalité à venir..." />
+                        </StackPanel>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+
+        </Grid>
+    </ScrollViewer>
+</Page>

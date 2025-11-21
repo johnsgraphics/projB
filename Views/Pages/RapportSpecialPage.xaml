@@ -1,0 +1,217 @@
+﻿<!-- filename: F:\CabinetDoc Pro\Views\Pages\RapportSpecialPage.xaml -->
+<Page x:Class="CabinetDocProWpf.Views.Pages.RapportSpecialPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:converters="clr-namespace:CabinetDocProWpf.Converters"
+      Title="Rapport Spécial"
+      Background="#F9FAFB">
+
+    <Page.Resources>
+        <converters:DecimalConverter x:Key="DecimalConverter"/>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="380"/>
+            <ColumnDefinition Width="12"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- LEFT: Form -->
+        <Border Grid.Column="0" Background="White" BorderBrush="#E5E7EB" BorderThickness="0,0,1,0">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="16">
+                <StackPanel>
+                    <TextBlock Text="RAPPORT - Données" FontSize="16" FontWeight="Bold" Margin="0,0,0,16"/>
+
+                    <!-- Comptable Info -->
+                    <TextBlock Text="Comptable (Nom)" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                    <TextBox x:Name="TxtComptableNom" Text="{Binding ComptableNom, Mode=TwoWay}" Padding="8" Margin="0,0,0,12"/>
+
+                    <TextBlock Text="Comptable (Titre)" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                    <TextBox x:Name="TxtComptableTitre" Text="{Binding ComptableTitre, Mode=TwoWay}" Padding="8" Margin="0,0,0,12"/>
+
+                    <TextBlock Text="Adresse" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                    <TextBox x:Name="TxtAdresse" Text="{Binding Adresse, Mode=TwoWay}" Padding="8" TextWrapping="Wrap" Height="60" Margin="0,0,0,12"/>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="8"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="NIF" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                            <TextBox x:Name="TxtNIF" Text="{Binding NIF, Mode=TwoWay}" Padding="8"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2">
+                            <TextBlock Text="NIS" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                            <TextBox x:Name="TxtNIS" Text="{Binding NIS, Mode=TwoWay}" Padding="8"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Margin="0,12,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="8"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="AI" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                            <TextBox x:Name="TxtAI" Text="{Binding AI, Mode=TwoWay}" Padding="8"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2">
+                            <TextBlock Text="Agrément" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                            <TextBox x:Name="TxtAgrement" Text="{Binding Agrement, Mode=TwoWay}" Padding="8"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <!-- Document Info -->
+                    <TextBlock Text="DOCUMENT" FontSize="14" FontWeight="Bold" Margin="0,20,0,8"/>
+
+                    <TextBlock Text="Numéro de Rapport" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                    <TextBox x:Name="TxtNumeroRapport" Padding="8" Margin="0,0,0,12"/>
+
+                    <TextBlock Text="Date du Rapport" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                    <DatePicker x:Name="DpDateRapport" SelectedDate="{Binding DateDocument, Mode=TwoWay}" Padding="8" Margin="0,0,0,12"/>
+
+                    <TextBlock Text="Objet de la Mission" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                    <TextBox x:Name="TxtObjetMission" Text="Augmentation du capital social" Padding="8" Margin="0,0,0,12"/>
+
+                    <TextBlock Text="Montant de l'augmentation (DA)" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                    <TextBox x:Name="TxtMontantAugmentation" Text="{Binding MontantAugmentation, Converter={StaticResource DecimalConverter}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Padding="8" Margin="0,0,0,16"/>
+
+                    <!-- Table 1 -->
+                    <TextBlock Text="Augmentation du Capital par Capitalisation" FontSize="13" FontWeight="Bold" Margin="0,8,0,8"/>
+                    <Button x:Name="BtnAddLigne" Content="+ Ajouter ligne" Padding="8,4" Margin="0,0,0,8" HorizontalAlignment="Left" Background="#10B981" Foreground="White" BorderThickness="0"/>
+
+                    <Border BorderBrush="#E5E7EB" BorderThickness="1" Margin="0,0,0,16">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="85"/>
+                                <ColumnDefinition Width="85"/>
+                                <ColumnDefinition Width="85"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Headers -->
+                            <Border Grid.Row="0" Grid.Column="0" Background="#F9FAFB" BorderBrush="#E5E7EB" BorderThickness="0,0,1,1" Padding="6">
+                                <TextBlock Text="Libellé" FontSize="10" FontWeight="SemiBold"/>
+                            </Border>
+                            <Border Grid.Row="0" Grid.Column="1" Background="#F9FAFB" BorderBrush="#E5E7EB" BorderThickness="0,0,1,1" Padding="6">
+                                <TextBlock Text="Passif avant" FontSize="10" FontWeight="SemiBold"/>
+                            </Border>
+                            <Border Grid.Row="0" Grid.Column="2" Background="#F9FAFB" BorderBrush="#E5E7EB" BorderThickness="0,0,1,1" Padding="6">
+                                <TextBlock Text="Passif après" FontSize="10" FontWeight="SemiBold"/>
+                            </Border>
+                            <Border Grid.Row="0" Grid.Column="3" Background="#F9FAFB" BorderBrush="#E5E7EB" BorderThickness="0,0,0,1" Padding="6">
+                                <TextBlock Text="Variation" FontSize="10" FontWeight="SemiBold"/>
+                            </Border>
+
+                            <!-- Row 1 -->
+                            <Border Grid.Row="1" Grid.Column="0" BorderBrush="#E5E7EB" BorderThickness="0,0,1,1" Padding="6">
+                                <TextBlock Text="Capital social" FontSize="10"/>
+                            </Border>
+                            <Border Grid.Row="1" Grid.Column="1" BorderBrush="#E5E7EB" BorderThickness="0,0,1,1" Padding="2">
+                                <TextBox x:Name="TxtCapitalAvant" Text="{Binding CapitalActuel, Converter={StaticResource DecimalConverter}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" FontSize="10" BorderThickness="0" Padding="4"/>
+                            </Border>
+                            <Border Grid.Row="1" Grid.Column="2" BorderBrush="#E5E7EB" BorderThickness="0,0,1,1" Padding="2">
+                                <TextBox x:Name="TxtCapitalApres" Text="{Binding CapitalNouveaux, Converter={StaticResource DecimalConverter}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" FontSize="10" BorderThickness="0" Padding="4"/>
+                            </Border>
+                            <Border Grid.Row="1" Grid.Column="3" BorderBrush="#E5E7EB" BorderThickness="0,0,0,1" Padding="6">
+                                <TextBlock x:Name="TxtVariationCapital" FontSize="10"/>
+                            </Border>
+
+                            <!-- Row 2 -->
+                            <Border Grid.Row="2" Grid.Column="0" BorderBrush="#E5E7EB" BorderThickness="0,0,1,0" Padding="6">
+                                <TextBlock Text="Compte courant associés" FontSize="10"/>
+                            </Border>
+                            <Border Grid.Row="2" Grid.Column="1" BorderBrush="#E5E7EB" BorderThickness="0,0,1,0" Padding="2">
+                                <TextBox x:Name="TxtCompteAvant" FontSize="10" BorderThickness="0" Padding="4"/>
+                            </Border>
+                            <Border Grid.Row="2" Grid.Column="2" BorderBrush="#E5E7EB" BorderThickness="0,0,1,0" Padding="2">
+                                <TextBox x:Name="TxtCompteApres" FontSize="10" BorderThickness="0" Padding="4"/>
+                            </Border>
+                            <Border Grid.Row="2" Grid.Column="3" BorderBrush="#E5E7EB" BorderThickness="0,0,0,0" Padding="6">
+                                <TextBlock x:Name="TxtVariationCompte" FontSize="10"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+
+                    <!-- Table 2: Associés -->
+                    <TextBlock Text="Détail de l'Augmentation par Associés" FontSize="13" FontWeight="Bold" Margin="0,8,0,8"/>
+                    <Button x:Name="BtnAddAssocie" Content="+ Ajouter associé" Padding="8,4" Margin="0,0,0,8" HorizontalAlignment="Left" Background="#3B82F6" Foreground="White" BorderThickness="0"/>
+
+                    <DataGrid x:Name="DgAssocies" 
+                              ItemsSource="{Binding Associes}" 
+                              AutoGenerateColumns="False"
+                              CanUserAddRows="False"
+                              Height="180"
+                              Margin="0,0,0,8"
+                              HeadersVisibility="Column"
+                              GridLinesVisibility="All"
+                              BorderBrush="#E5E7EB"
+                              BorderThickness="1">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nom" Binding="{Binding NomAssocie}" Width="*" MinWidth="80"/>
+                            <DataGridTextColumn Header="Nbr avant" Binding="{Binding NbPartsAvant}" Width="65"/>
+                            <DataGridTextColumn Header="Val. avant" Binding="{Binding ValeurPartsAvant, Converter={StaticResource DecimalConverter}}" Width="75"/>
+                            <DataGridTextColumn Header="Nbr après" Binding="{Binding NbPartsApres}" Width="65"/>
+                            <DataGridTextColumn Header="Val. après" Binding="{Binding ValeurPartsApres, Converter={StaticResource DecimalConverter}}" Width="75"/>
+                            <DataGridTextColumn Header="%" Binding="{Binding Pourcentage, StringFormat=N2}" Width="50"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,16">
+                        <Button x:Name="BtnRemoveAssocie" Content="➖ Supprimer" Padding="8,4" Background="#EF4444" Foreground="White" BorderThickness="0"/>
+                    </StackPanel>
+
+                    <!-- Sections du Rapport -->
+                    <TextBlock Text="Sections du Rapport" FontSize="13" FontWeight="Bold" Margin="0,16,0,8"/>
+
+                    <TextBlock Text="Préambule" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                    <TextBox x:Name="TxtPreambule" TextWrapping="Wrap" Height="80" Padding="8" Margin="0,0,0,12" VerticalScrollBarVisibility="Auto"/>
+
+                    <TextBlock Text="Exposé Motifs" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                    <TextBox x:Name="TxtExposeMotifs" TextWrapping="Wrap" Height="80" Padding="8" Margin="0,0,0,12" VerticalScrollBarVisibility="Auto"/>
+
+                    <TextBlock Text="Références Réglementaires" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                    <TextBox x:Name="TxtReferencesReglementaires" TextWrapping="Wrap" Height="80" Padding="8" Margin="0,0,0,12" VerticalScrollBarVisibility="Auto"/>
+
+                    <TextBlock Text="Références Internes" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                    <TextBox x:Name="TxtReferencesInternes" TextWrapping="Wrap" Height="80" Padding="8" Margin="0,0,0,12" VerticalScrollBarVisibility="Auto"/>
+
+                    <TextBlock Text="Modalité Augmentation" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                    <TextBox x:Name="TxtModaliteAugmentation" TextWrapping="Wrap" Height="80" Padding="8" Margin="0,0,0,12" VerticalScrollBarVisibility="Auto"/>
+
+                    <TextBlock Text="Conclusion" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                    <TextBox x:Name="TxtConclusion" TextWrapping="Wrap" Height="80" Padding="8" Margin="0,0,0,16" VerticalScrollBarVisibility="Auto"/>
+
+                    <!-- Action Buttons -->
+                    <Button x:Name="BtnCalculer" Content="🔢 Calculer" Padding="12,8" Margin="0,0,0,8" Background="#10B981" Foreground="White" FontWeight="SemiBold" BorderThickness="0"/>
+                    <Button x:Name="BtnApercu" Content="👁️ Aperçu" Padding="12,8" Margin="0,0,0,8" Background="#3B82F6" Foreground="White" FontWeight="SemiBold" BorderThickness="0"/>
+                    <Button x:Name="BtnImprimer" Content="🖨️ Imprimer" Padding="12,8" Margin="0,0,0,8" Background="#6366F1" Foreground="White" FontWeight="SemiBold" BorderThickness="0"/>
+                    <Button x:Name="BtnEnregistrer" Content="💾 Enregistrer" Padding="12,8" Background="#059669" Foreground="White" FontWeight="SemiBold" BorderThickness="0"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <!-- RIGHT: Live Preview (Empty for now - will be populated by code-behind) -->
+        <ScrollViewer Grid.Column="2" VerticalScrollBarVisibility="Auto" Background="#F3F4F6" Padding="32">
+            <Border x:Name="PreviewContainer" Background="White" CornerRadius="8" Padding="48" MaxWidth="800"
+                    BorderBrush="#E5E7EB" BorderThickness="1">
+                <StackPanel x:Name="PreviewContent">
+                    <TextBlock Text="Aperçu du document" FontSize="14" Foreground="#9CA3AF" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
+    </Grid>
+</Page>

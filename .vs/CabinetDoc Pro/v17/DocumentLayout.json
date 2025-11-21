@@ -1,0 +1,251 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\CabinetDoc Pro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\services\\settingsintegrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:services\\settingsintegrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\models\\rapportaugmentationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:models\\rapportaugmentationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\views\\pages\\rapportspecialpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:views\\pages\\rapportspecialpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\views\\pages\\rapportspecialpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:views\\pages\\rapportspecialpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\converters\\decimalconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:converters\\decimalconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\services\\settingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:services\\settingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\views\\pages\\dashboardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:views\\pages\\dashboardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\views\\pages\\dashboardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:views\\pages\\dashboardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\views\\pages\\notehonorairepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:views\\pages\\notehonorairepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\views\\pages\\documentpreviewpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:views\\pages\\documentpreviewpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\models\\documentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:models\\documentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|f:\\cabinetdoc pro\\views\\pages\\clientspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21620FBB-C9A3-4B27-9DB0-A40AD6A5B97D}|CabinetDocProWpf.csproj|solutionrelative:views\\pages\\clientspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DecimalConverter.cs",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Converters\\DecimalConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\DecimalConverter.cs",
+              "ToolTip": "F:\\CabinetDoc Pro\\Converters\\DecimalConverter.cs",
+              "RelativeToolTip": "Converters\\DecimalConverter.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAUwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T22:56:26.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SettingsIntegrationService.cs",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Services\\SettingsIntegrationService.cs",
+              "RelativeDocumentMoniker": "Services\\SettingsIntegrationService.cs",
+              "ToolTip": "F:\\CabinetDoc Pro\\Services\\SettingsIntegrationService.cs",
+              "RelativeToolTip": "Services\\SettingsIntegrationService.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAIwKMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:33:32.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RapportAugmentationModel.cs",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Models\\RapportAugmentationModel.cs",
+              "RelativeDocumentMoniker": "Models\\RapportAugmentationModel.cs",
+              "ToolTip": "F:\\CabinetDoc Pro\\Models\\RapportAugmentationModel.cs",
+              "RelativeToolTip": "Models\\RapportAugmentationModel.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAIwKQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T23:38:22.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RapportSpecialPage.xaml.cs",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Views\\Pages\\RapportSpecialPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\Pages\\RapportSpecialPage.xaml.cs",
+              "ToolTip": "F:\\CabinetDoc Pro\\Views\\Pages\\RapportSpecialPage.xaml.cs",
+              "RelativeToolTip": "Views\\Pages\\RapportSpecialPage.xaml.cs",
+              "ViewState": "AgIAANgBAAAAAAAAAAAIwO8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T23:07:01.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RapportSpecialPage.xaml",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Views\\Pages\\RapportSpecialPage.xaml",
+              "RelativeDocumentMoniker": "Views\\Pages\\RapportSpecialPage.xaml",
+              "ToolTip": "F:\\CabinetDoc Pro\\Views\\Pages\\RapportSpecialPage.xaml",
+              "RelativeToolTip": "Views\\Pages\\RapportSpecialPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-19T22:59:33.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\MainWindow.xaml",
+              "ToolTip": "F:\\CabinetDoc Pro\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-20T00:02:04.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SettingsService.cs",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Services\\SettingsService.cs",
+              "RelativeDocumentMoniker": "Services\\SettingsService.cs",
+              "ToolTip": "F:\\CabinetDoc Pro\\Services\\SettingsService.cs",
+              "RelativeToolTip": "Services\\SettingsService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:32:51.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DocumentPreviewPage.xaml",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Views\\Pages\\DocumentPreviewPage.xaml",
+              "RelativeDocumentMoniker": "Views\\Pages\\DocumentPreviewPage.xaml",
+              "ToolTip": "F:\\CabinetDoc Pro\\Views\\Pages\\DocumentPreviewPage.xaml",
+              "RelativeToolTip": "Views\\Pages\\DocumentPreviewPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-19T23:41:15.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NoteHonorairePage.xaml",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Views\\Pages\\NoteHonorairePage.xaml",
+              "RelativeDocumentMoniker": "Views\\Pages\\NoteHonorairePage.xaml",
+              "ToolTip": "F:\\CabinetDoc Pro\\Views\\Pages\\NoteHonorairePage.xaml",
+              "RelativeToolTip": "Views\\Pages\\NoteHonorairePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-19T22:59:51.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DashboardPage.xaml.cs",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Views\\Pages\\DashboardPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\Pages\\DashboardPage.xaml.cs",
+              "ToolTip": "F:\\CabinetDoc Pro\\Views\\Pages\\DashboardPage.xaml.cs",
+              "RelativeToolTip": "Views\\Pages\\DashboardPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:06:33.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\MainWindow.xaml.cs",
+              "ToolTip": "F:\\CabinetDoc Pro\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAJgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T00:09:40.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DashboardPage.xaml",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Views\\Pages\\DashboardPage.xaml",
+              "RelativeDocumentMoniker": "Views\\Pages\\DashboardPage.xaml",
+              "ToolTip": "F:\\CabinetDoc Pro\\Views\\Pages\\DashboardPage.xaml",
+              "RelativeToolTip": "Views\\Pages\\DashboardPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-20T21:07:26.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DocumentModel.cs",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Models\\DocumentModel.cs",
+              "RelativeDocumentMoniker": "Models\\DocumentModel.cs",
+              "ToolTip": "F:\\CabinetDoc Pro\\Models\\DocumentModel.cs",
+              "RelativeToolTip": "Models\\DocumentModel.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T23:43:26.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ClientsPage.xaml.cs",
+              "DocumentMoniker": "F:\\CabinetDoc Pro\\Views\\Pages\\ClientsPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\Pages\\ClientsPage.xaml.cs",
+              "ToolTip": "F:\\CabinetDoc Pro\\Views\\Pages\\ClientsPage.xaml.cs",
+              "RelativeToolTip": "Views\\Pages\\ClientsPage.xaml.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAAAOsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T00:14:31.462Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,3 @@
-﻿<!--  filename: F:\CabinetDoc Pro\Views\Pages\ClientsPage.xaml  -->
 <Page
     x:Class="CabinetDocProWpf.Views.Pages.ClientsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -9,7 +8,6 @@
     d:DesignWidth="1200"
     Background="#F3F5FA"
     mc:Ignorable="d">
-
     <ScrollViewer PanningMode="VerticalOnly" VerticalScrollBarVisibility="Auto">
         <Grid Margin="40,30">
             <Grid.RowDefinitions>
@@ -18,9 +16,9 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-
-            <!--  Header Section ... -->
-            <!--  Clients List (Visible when data exists) -->
+            <!-- ... header and stats ... -->
+            <!--  Search + Filters  ... -->
+            <!--  Clients List  -->
             <Border
                 x:Name="ClientsList"
                 Grid.Row="3"
@@ -31,7 +29,7 @@
                     Name="ListClients"
                     Background="Transparent"
                     BorderThickness="0"
-                    ItemsSource="{Binding Clients}">
+                    ItemsSource="{Binding}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Border Margin="0,0,0,15" Padding="24" Background="White" CornerRadius="12">
@@ -44,7 +42,6 @@
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-
                                     <StackPanel Grid.Column="0">
                                         <TextBlock FontSize="16" FontWeight="SemiBold" Foreground="#1F2937" Text="{Binding Name}" />
                                         <TextBlock Margin="0,6,0,0" FontSize="13" Foreground="#6B7280" Text="{Binding Address}" />
@@ -59,12 +56,10 @@
                                             </TextBlock>
                                         </StackPanel>
                                     </StackPanel>
-
                                     <!-- Edit button -->
                                     <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                                        <Button Padding="12,8" Content="📝 Modifier" FontSize="12" Style="{StaticResource SecondaryButtonStyle}" Click="EditClient_Click"/>
+                                        <Button Padding="12,8" Content="📝 Modifier" FontSize="12" Style="{StaticResource SecondaryButtonStyle}" Click="EditClient_Click"/> 
                                     </StackPanel>
-
                                     <!-- Delete button -->
                                     <StackPanel Grid.Column="2" VerticalAlignment="Center">
                                         <Button Padding="12,8" Content="🗑 Supprimer" FontSize="12" Style="{StaticResource DangerButtonStyle}" Click="DeleteClient_Click"/>
@@ -75,8 +70,26 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </Border>
-
-            <!-- Empty State ... -->
+            <!--  Empty State  -->
+            <Border
+                x:Name="EmptyState"
+                Grid.Row="3"
+                Padding="60"
+                Background="White"
+                CornerRadius="12"
+                Visibility="Visible">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10" Opacity="0.08" ShadowDepth="0" Color="#000000" />
+                </Border.Effect>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Border Width="120" Height="120" Margin="0,0,0,25" Background="#F3F4F6" CornerRadius="60">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="60" Text="👥" />
+                    </Border>
+                    <TextBlock Margin="0,0,0,10" HorizontalAlignment="Center" FontSize="22" FontWeight="SemiBold" Foreground="#1F2937" Text="Aucun client trouvé" />
+                    <TextBlock MaxWidth="450" Margin="0,0,0,30" HorizontalAlignment="Center" FontSize="14" Foreground="#6B7280" Text="Commencez par ajouter votre premier client pour gérer vos relations comptables." TextAlignment="Center" TextWrapping="Wrap" />
+                    <Button Padding="20,12" Click="BtnAddClient_Click" Content="➕ Ajouter votre premier client" FontSize="14" Style="{StaticResource PrimaryButtonStyle}" />
+                </StackPanel>
+            </Border>
         </Grid>
     </ScrollViewer>
 </Page>
